@@ -1,6 +1,7 @@
-module "eks-module" {    
-    source         = "github.com/lily4499/terraform-aws-eks?ref=v1.0.0"    
-    region         = "us-east-1" // Set your desired region here     
+module "eks" {    
+    source         = "lily4499/eks/aws"   
+    region         = "us-east-1" // Set your desired region here 
+    version        = ">= 1.0.0, < 2.0.0"    
     vpc_cidr       = "10.0.0.0/16"    
     dns_hostnames  = true    
     dns_support    = true    
